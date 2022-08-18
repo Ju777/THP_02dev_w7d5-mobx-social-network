@@ -1,7 +1,7 @@
-# Learn REDUX and the global state management.
+# Learn Mobx and the global state management.
 
 ## Welcome on ChitChat !
-This website is a training to React, global state handling (with Redux) and tokens. Here, authentification and routing will be used to create a small social media website.
+This website is a training to React, global state handling (with Mobx) and tokens. Here, authentification and routing will be used to create a small social media website.
 
 #### How to use this application ? You have to get 2 repos : the first is the API, the second is the application.
 ##### To run the API :
