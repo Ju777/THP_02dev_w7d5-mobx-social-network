@@ -40,12 +40,12 @@ function SharedLayout() {
                 <nav>
 
                     <div>
-                        <Link to = "/" id='link-logo' >
-                            <img src={logoChitchat} alt="logo" className='logo'/>
-                        </Link>   
+                        <img src={logoChitchat} alt="logo" className='logo'/>
                     </div>
 
-                   
+                    <div className='link-container'>
+                        <Link to = "/" className='link'>HOME</Link>                  
+                    </div>
 
                     { isTokenCreated ?
                         <>
@@ -71,11 +71,6 @@ function SharedLayout() {
 
                             <>
 
-                            <div>
-                                not logged in
-                                {/* <br/>Redux Token : {isTokenCreated.toString()}
-                                <br/>Redux authUser : {authUser.username}             */}
-                            </div>
                             
                             <div>
                                 <div className='link-container'>
@@ -87,6 +82,11 @@ function SharedLayout() {
                             </div>
 
                             
+                            <div>
+                                not logged in
+                                {/* <br/>Redux Token : {isTokenCreated.toString()}
+                                <br/>Redux authUser : {authUser.username}             */}
+                            </div>
                             </>
                         }
                       

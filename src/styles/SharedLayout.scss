@@ -1,7 +1,7 @@
 nav{
     // border: 2px solid #82939d;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     height: 20vh;
     width: 45%;
     background-color: #a1b3be;
@@ -21,20 +21,33 @@ nav{
 }
 
 .logo{
-    width: 100%;
+    width: 50%;
     height: auto;
-    box-shadow: 1px 1px 10px 3px black;
+    margin-left: 50px;
+    box-shadow: 1px 1px 10px 3px #3f464b;
     border-radius: 50%;
-    transform: scale(0.5);
+    animation-duration: 3s;
+    animation-name: rotating;
+    transform: rotation(-360deg);
     transition: 5000ms;
-    // align-self: start;
 }
 
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+  
+    to {
+        transform: rotate(360deg);
+        transition: 5000ms;
+    }
+  }
+
 .logo:hover{
-    width: 100%;
+    width: 50%;
     height: auto;
     transform : rotate(360deg);
-    transition: 500ms;
+    transition: 5000ms;
 }
 
 .link-container{
