@@ -1,24 +1,49 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useEffect } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import SharedLayout from './components/SharedLayout';
+import Home from './pages/Home';
+import Register from './pages/Register';
+import Login from './pages/Login';
+import Profile from './pages/Profile';
+import Error from './pages/Error';
+import ProtectedRoute from './components/ProtectedRoute';
+import AuthorProfile from './pages/AuthorProfile';
+
 
 function App() {
+
+  useEffect( () => {
+    // let data=window.performance.getEntriesByType("navigation")[0].type;
+    // console.log(data);
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+      <div className="">
+        <BrowserRouter><Routes>
+
+          <Route path = "/" element = {<SharedLayout/>}>
+          <Route index element = {<Home/>}/>
+
+            <Route path = "/register" element = {<Register/>}/>
+            <Route path = "/login" element = {<Login/>}/>
+            <Route path = "/error" element = {<Error/>}/>
+
+            <Route path = "/profile" element = {<ProtectedRoute>
+                                                  {<Profile/>}
+                                                </ProtectedRoute>}/>
+
+            <Route path = "/user/:authorId" element = {<ProtectedRoute>
+                                                        {<AuthorProfile/>}
+                                                      </ProtectedRoute>}/>
+          
+          </Route>
+
+        </Routes></BrowserRouter>
+      </div>
+    
   );
 }
 

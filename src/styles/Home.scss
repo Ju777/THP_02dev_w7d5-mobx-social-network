@@ -1,0 +1,143 @@
+.post-container{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    width: 100%;
+    height: 20vh;
+    justify-items: center;
+    align-items: center;
+    border-top: 1px solid #24425491;
+    border-bottom: 1px solid #24425491;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+#new-post-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    z-index: 0;
+}
+
+#new-post-form{
+    // border: 3px solid purple;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center ;
+    width: 100%;
+}
+
+#new-post-input-container{
+    // transform: scale(2);
+    // margin-bottom: 5vh;
+}
+
+#new-post-input{
+    border: 0.5px solid #24425491;
+    border-radius: 10px;
+    text-align: center;
+    // text-decoration: underline;
+}
+
+#new-post-input:focus{
+    border: none;
+    text-align: center;
+    // text-decoration: underline;
+}
+
+
+#new-post-button-container{
+    // transform: scale(1.75);
+    // margin-left: 30vw;
+}
+
+#new-post-button{
+    background-color: #542442;
+    border: 3px solid #ffffff;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#new-post-button:hover{
+    background-color: #ffffff;
+    border: 3px solid #542442;
+    color: #542442;
+    border-radius: 10px;
+    padding: 5px;
+    // box-shadow: 0px 0px 7px 5px #5424428d;
+}
+
+
+.author-part{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.post-owner-style{
+    border: 1px solid orange;
+    background-color: rgb(255, 80, 80);
+    border-radius: 25px;
+    color: white;
+    font-size: 0.75rem;
+    padding: 10px;
+}
+
+.like-part{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.liking-buttons-container{
+    padding: 5px;
+}
+
+.like-button{
+    // transform: scale(0.5)
+    background-color: #0cc26d;
+    color: white;
+    border-radius: 50%;
+    border: none;
+    margin-right: 3px;
+}
+
+.unlike-button{
+    // transform: scale(0.5)
+    background-color: #ff4949;
+    color: white;
+    border-radius: 50%;
+    border: none;
+    margin-right: 3px;
+}
+
+.like-button:hover{
+    // transform: scale(0.5)
+    background-color: #0cc26d;
+    color: white;
+    border-radius: 50%;
+    margin-right: 3px;
+    box-shadow: 0px 0px 5px 2px black;
+}
+
+.unlike-button:hover{
+    // transform: scale(0.5)
+    background-color: #ff4949;
+    color: white;
+    border-radius: 50%;
+    margin-right: 3px;
+    box-shadow: 0px 0px 5px 2px black;
+}
+
+#visitor-panel{
+    // border: 3px solid purple;
+    // padding: 20px;
+    align-self: center;
+}

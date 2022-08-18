@@ -1,0 +1,17 @@
+#profile-container{
+    // border: 3px solid red;
+    width: 50%;
+    // margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    // justify-self: center;
+    // align-self: center;
+}
+
+.user-data-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+    align-items: center;
+}
+

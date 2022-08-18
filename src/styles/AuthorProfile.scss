@@ -1,0 +1,22 @@
+#profile-container{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.user-data-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.posts-container{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
