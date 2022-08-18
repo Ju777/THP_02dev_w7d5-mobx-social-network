@@ -1,12 +1,17 @@
-import React from 'react';
-import { useAtomValue } from 'jotai';
+import React, { useSyncExternalStore } from 'react';
 import { authUserAtom } from '../atoms/authUser';
+import { useAtomValue } from 'jotai';
+import { useSelector } from 'react-redux';
 import Cookies from 'js-cookie';
+
+
 const API_URL_POSTS = "http://localhost:1337/posts/";
 
-function NewPost({forceUpdate}) {
+function NewPost() {
 
-    const authUser = useAtomValue(authUserAtom);
+    // const authUser = useAtomValue(authUserAtom);
+    const authUser = useSelector((state) => state.authUser);
+
     const token = Cookies.get('token');
 
     // Create a new post
@@ -20,7 +25,7 @@ function NewPost({forceUpdate}) {
             user: authUser.id
         }
 
-        // console.log('postData => ', postData);
+        console.log('postData => ', postData);
 
         // console.log('token => ', token)
 
@@ -30,17 +35,18 @@ function NewPost({forceUpdate}) {
             body: JSON.stringify(postData)
         })
         .then(response => response.json())
-        // .then(data => console.log(data))
+        .then(data => {
+            console.log(data);
+            window.location.reload();
+        })
         .catch(error => console.log(error.message));
-
-        forceUpdate();
     }
 
     return (
         <>
             {/* <h3>Authenticated User panel</h3> */}
             <div id="new-post-container">
-                <form onSubmit = {fetchPOST} id="new-post-form">
+                <form onSubmit = { fetchPOST } id="new-post-form">
                     <div id="new-post-input-container">
                         <input
                             type="text"

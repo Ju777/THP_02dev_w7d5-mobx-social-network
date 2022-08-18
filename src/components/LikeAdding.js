@@ -3,7 +3,7 @@ import Cookies from 'js-cookie';
 
 // forceUpdate est conservé en props mais mis en commentaire plus bas car fonctionne un coup sur 2
 // et pas sur tous les navigateurs : Opéra pas de souci, Chrome et Firefox moyen.
-function LikeAdding({post, forceUpdate}) {
+function LikeAdding({post}) {
     const API_URL_POSTS = "http://localhost:1337/posts/";
     const token = Cookies.get('token');
 
@@ -20,8 +20,6 @@ function LikeAdding({post, forceUpdate}) {
             window.location.reload();
         })
         .catch(error => console.log(error.message))
-
-        // forceUpdate();
     }
 
     return (
